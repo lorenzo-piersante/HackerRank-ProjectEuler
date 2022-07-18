@@ -2,12 +2,28 @@ package problem1
 
 import java.util.*
 
-private fun f(x : Int) : Int {
-    return (x*(x+1)).floorDiv(2)
+/**
+ * https://en.wikipedia.org/wiki/Triangular_number
+ */
+private fun triangleNumber(n : Int) : Int {
+    return n*(n+1)/2
+}
+
+private fun s3(n : Int) : Int {
+    return 3/2 * triangleNumber(n/3)
+}
+
+private fun s5(n : Int) : Int {
+    return 5/2 * triangleNumber(n/5)
+}
+
+private fun s15(n : Int) : Int {
+    return 15/2 * triangleNumber(n/15)
 }
 
 /**
- * TODO: this version is a work in progress
+ * TODO: work in progress solution
+ * based on this post: https://medium.com/@TheZaki/project-euler-1-multiples-of-3-and-5-c24cb64071b0
  */
 fun main() {
     val sc = Scanner(System.`in`)
@@ -17,10 +33,6 @@ fun main() {
     for (index in 0 until numberOfInputs) {
         val input = sc.nextInt() - 1
 
-        val a = input.floorDiv(3)
-        val b = input.floorDiv(5)
-        val c = input.floorDiv(15)
-
-        println(3*f(a)+5*f(b)-15*f(c))
+        println(s3(input) + s5(input) - s15(input))
     }
 }
