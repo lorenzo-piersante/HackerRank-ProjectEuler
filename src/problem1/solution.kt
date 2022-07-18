@@ -4,7 +4,7 @@ import java.util.Scanner
 
 /**
  * This version of the program still fails HackerRank test cases for exceeding time limits!
- * I need to optimize code further
+ * I need to optimize code further, O(n) complexity
  */
 fun main() {
     val sc = Scanner(System.`in`)

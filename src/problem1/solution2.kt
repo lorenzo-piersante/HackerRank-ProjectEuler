@@ -4,7 +4,7 @@ import java.util.Scanner
 
 /**
  * Time limit exceeded again!!!
- * Might be even worse than solution 1
+ * Might be even worse than solution 1, O(n) complexity
  * I'm proud of having used Set, so I will keep it as reference
  */
 fun main() {
