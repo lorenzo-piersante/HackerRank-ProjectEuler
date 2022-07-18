@@ -1,6 +1,6 @@
 .idea
 
-*.jar
+solution.jar
 
 # Ignore Gradle project-specific cache directory
 .gradle
