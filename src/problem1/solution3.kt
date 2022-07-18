@@ -10,15 +10,15 @@ private fun triangleNumber(n : Int) : Int {
 }
 
 private fun s3(n : Int) : Int {
-    return 3/2 * triangleNumber(n/3)
+    return 3 * triangleNumber(n/3)
 }
 
 private fun s5(n : Int) : Int {
-    return 5/2 * triangleNumber(n/5)
+    return 5 * triangleNumber(n/5)
 }
 
 private fun s15(n : Int) : Int {
-    return 15/2 * triangleNumber(n/15)
+    return 15 * triangleNumber(n/15)
 }
 
 /**
