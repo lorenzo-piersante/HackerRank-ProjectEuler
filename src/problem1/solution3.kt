@@ -13,7 +13,7 @@ private fun solve(n : Int) : Long {
     val s5 = 5 * triangleNumber(n/5)
     val s15 = 15 * triangleNumber(n/15)
 
-    return s3 + s5 + s15
+    return s3 + s5 - s15
 }
 
 /**
