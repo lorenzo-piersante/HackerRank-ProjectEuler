@@ -2,6 +2,30 @@ package problem1
 
 import java.util.Scanner
 
+fun sumMultiplesOf3And5V2(input: Int) : Int {
+    val ds = mutableSetOf<Int>()
+
+    if (input <= 3) {
+        return 0
+    }
+
+    if (input <= 5) {
+        return 3
+    }
+
+    val a = if (input % 3 == 0) input - 3 else input - input % 3
+    for (i in 3..a step 3) {
+        ds.add(i)
+    }
+
+    val b = if (input % 5 == 0) input - 5 else input - input % 5
+    for (j in 5..b step 5) {
+        ds.add(j)
+    }
+
+    return ds.sum()
+}
+
 /**
  * Time limit exceeded again!!!
  * Might be even worse than solution 1, O(n) complexity
@@ -12,34 +36,11 @@ fun main() {
 
     val numberOfInputs = sc.nextInt()
 
-    val inputs = IntArray(numberOfInputs)
-    for (index in 0 until numberOfInputs) {
-        inputs[index] = sc.nextInt()
-    }
+    for (i in 0 until numberOfInputs) {
+        val input = sc.nextInt()
 
-    for (input in inputs) {
-        val ds = mutableSetOf<Int>()
+        val result = sumMultiplesOf3And5V2(input)
 
-        if (input <= 3) {
-            println(0)
-            continue
-        }
-
-        if (input <= 5) {
-            println(3)
-            continue
-        }
-
-        val a = if (input % 3 == 0) input - 3 else input - input % 3
-        for (i in 3..a step 3) {
-            ds.add(i)
-        }
-
-        val b = if (input % 5 == 0) input - 5 else input - input % 5
-        for (j in 5..b step 5) {
-            ds.add(j)
-        }
-
-        println(ds.sum())
+        println(result)
     }
 }

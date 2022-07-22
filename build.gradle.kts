@@ -8,6 +8,8 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
+
+    testImplementation(kotlin("test"))
 }
 
 sourceSets {
@@ -18,4 +20,8 @@ sourceSets {
     test {
         java.srcDir("src/test")
     }
+}
+
+tasks.test {
+    useJUnitPlatform()
 }

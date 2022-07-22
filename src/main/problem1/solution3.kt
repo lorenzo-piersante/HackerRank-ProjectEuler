@@ -8,7 +8,9 @@ private fun triangleNumber(n : Int) : Long {
     return ln*(ln+1)/2
 }
 
-private fun solve(n : Int) : Long {
+fun sumMultiplesOf3And5V3(input : Int) : Long {
+    val n = input - 1
+
     val s3 = 3 * triangleNumber(n/3)
     val s5 = 5 * triangleNumber(n/5)
     val s15 = 15 * triangleNumber(n/15)
@@ -25,8 +27,10 @@ fun main() {
     val numberOfInputs = sc.nextInt()
 
     for (i in 0 until numberOfInputs) {
-        val input = sc.nextInt() - 1
+        val input = sc.nextInt()
 
-        println(solve(input))
+        val result = sumMultiplesOf3And5V3(input)
+
+        println(result)
     }
 }

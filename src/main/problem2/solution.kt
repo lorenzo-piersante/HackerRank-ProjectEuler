@@ -2,7 +2,7 @@ package problem2
 
 import java.util.Scanner
 
-private fun solve(input : Long) : Long {
+fun sumEvenFibonacciNumber(input : Long) : Long {
     val sequence = arrayListOf<Long>()
 
     sequence.add(0, 1)
@@ -10,7 +10,7 @@ private fun solve(input : Long) : Long {
 
     for (j in 2 until 10000) {
         val element = sequence[j-2] + sequence[j-1]
-        if (element > input) break
+        if (element > input - 1) break
         sequence.add(j, element)
     }
 
@@ -34,8 +34,10 @@ fun main() {
     val numberOfInputs = sc.nextInt()
 
     for (i in 0 until numberOfInputs) {
-        val input : Long = sc.nextLong() - 1
+        val input : Long = sc.nextLong()
 
-        println(solve(input))
+        val result = sumEvenFibonacciNumber(input)
+
+        println(result)
     }
 }
