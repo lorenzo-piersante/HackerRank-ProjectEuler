@@ -2,6 +2,11 @@ package problem1
 
 import java.util.Scanner
 
+/**
+ * Time limit exceeded again!!!
+ * Might be even worse than solution 1, O(n) complexity
+ * I'm proud of having used Set, so I will keep it as reference
+ */
 fun sumMultiplesOf3And5V2(input: Int) : Int {
     val ds = mutableSetOf<Int>()
 
@@ -26,11 +31,6 @@ fun sumMultiplesOf3And5V2(input: Int) : Int {
     return ds.sum()
 }
 
-/**
- * Time limit exceeded again!!!
- * Might be even worse than solution 1, O(n) complexity
- * I'm proud of having used Set, so I will keep it as reference
- */
 fun main() {
     val sc = Scanner(System.`in`)
 

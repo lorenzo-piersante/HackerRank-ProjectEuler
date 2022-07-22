@@ -8,6 +8,9 @@ private fun triangleNumber(n : Int) : Long {
     return ln*(ln+1)/2
 }
 
+/**
+ * This is a great solution with O(1) complexity!
+ */
 fun sumMultiplesOf3And5V3(input : Int) : Long {
     val n = input - 1
 
@@ -18,9 +21,6 @@ fun sumMultiplesOf3And5V3(input : Int) : Long {
     return s3 + s5 - s15
 }
 
-/**
- * This is a great solution with O(1) complexity!
- */
 fun main() {
     val sc = Scanner(System.`in`)
 
