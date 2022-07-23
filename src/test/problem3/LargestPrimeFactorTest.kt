@@ -11,4 +11,10 @@ class LargestPrimeFactorTest {
         Assertions.assertEquals(17, getMaxPrimeFactor(17))
     }
 
+    @Test
+    fun shouldSolveTheProblemV2() {
+        Assertions.assertEquals(5, getMaxPrimeFactorV2(10))
+        Assertions.assertEquals(17, getMaxPrimeFactorV2(17))
+    }
+
 }
